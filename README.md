@@ -7,6 +7,8 @@
 - [day1.csv](src/ws_ldn_1/day1/csv.clj) - CSV parsing & column extraction
 - [day1.people](src/ws_ldn_1/day1/people.clj) - EDN parsing & transformation
 
+Airport dataset from: http://ourairports.com/data/
+
 ## Day 2 namespaces
 
 - [day2.custom-types](src/ws_ldn_1/day2/custom_types.clj) - Custom types & protocols
