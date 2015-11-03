@@ -23,11 +23,14 @@
      (* EARTH_RADIUS_MAJOR (m/radians lon))
      (* (- EARTH_RADIUS_MAJOR) (Math/log ts)))))
 
-(defn mercator-normalized
-  ([lon lat] (mercator-normalized lon lat 1.0))
-  ([lon lat h]
-   (let [nx    2.0037508342789244E7 ;; mercator lon @ +/-180 deg
-         ny    3.464067325399331E7  ;; mercator lat @ +/-90 deg
-         w     (* h (/ nx ny))
-         [x y] (mercator lat lon)]
-     (vec2 (* (/ x nx) w) (* (/ y ny) h)))))
+(defn lat-log
+  [lat] (Math/log (Math/tan (+ (/ (m/radians lat) 2) m/QUARTER_PI))))
+
+(defn mercator-in-rect
+  [[lon lat] [left right top bottom] w h]
+  (let [lon              (m/radians lon)
+        left             (m/radians left)
+        [lat top bottom] (map lat-log [lat top bottom])]
+    (vec2
+      (* w (/ (- lon left) (- (m/radians right) left)))
+      (* h (/ (- lat top) (- bottom top))))))
