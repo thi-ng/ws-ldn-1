@@ -39,21 +39,24 @@
 
 (defn transform-lat-lon
   "Takes a single airport map and parses string lat/lon keys as numbers.
+  Also inject new key :lonlat-point as 2d vector.
   Returns updated airport."
   [airport]
-  (-> airport
-      (update :latitude_deg f/parse-float)
-      (update :longitude_deg f/parse-float)
-      ;; TODO add :latlon-point as vec2
-      ))
-
+  (let [airport' (-> airport
+                     (update :latitude_deg f/parse-float)
+                     (update :longitude_deg f/parse-float))]
+    (assoc airport'
+           :lonlat-point (vec2 (:longitude_deg airport')
+                               (:latitude_deg airport')))))
+  
 (defn load-airports
   [path cols]
   (let [airports  (load-csv-resource path)
         col-idx   (build-column-index cols (first airports))
-        keep-cols (set (keys airports-col-idx))
+        keep-cols (set (keys col-idx))
         airports  (map #(transform-csv-row col-idx keep-cols %) (rest airports))
-        airports  (map #(transform-lat-lon %) airports)]
+        airports  (map #(transform-lat-lon %) airports)
+        airports  (remove #(> (Math/abs (:latitude_deg %)) 88) airports)]
     airports))
 
 (def airports
