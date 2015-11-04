@@ -20,6 +20,8 @@ Airport dataset from: http://ourairports.com/data/
 
 47k airports mapped, data from [ourairports.com](http://ourairports.com/data/)
 
+Github doesn't display the map background image, see original viz [here](http://workshop.thi.ng/ws-ldn-1/airports.svg)...
+
 ### Clojurescript, Reagent / React example
 
 - [ui.day2.core](src-cljs/ws_ldn_1/day2/core.cljs) - basic concepts & undo demo
