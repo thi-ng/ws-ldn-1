@@ -12,12 +12,11 @@
   
   :plugins      [[lein-figwheel "0.4.1"]]
   
-  :cljsbuild {:builds [{:id "dev" 
-                        :source-paths ["src-cljs/"]
+  :cljsbuild {:builds [{:id "day2" 
+                        :source-paths ["src-cljs"]
                         :figwheel true
-                        :compiler {:main "ws-ldn-1.ui.core"
+                        :compiler {:main "ws-ldn-1.ui.day2.core"
                                    :asset-path "js/out"
                                    :output-to "resources/public/js/app.js"
-                                   :output-dir "resources/public/js/out"
-                                   } } ]
+                                   :output-dir "resources/public/js/out"}}]
 })
