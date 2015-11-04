@@ -9,7 +9,7 @@
 ;; load people specs from resource file
 
 (def people-raw
-  (->> "people.edn"
+  (->> "day1/people.edn"
     (io/resource)             ;; convert to resource URI
     (slurp)                   ;; read as string
     (edn/read-string)))       ;; parse EDN format
@@ -18,7 +18,7 @@
 ;; better when loading larger data
 
 (def people-raw
-  (->> "people.edn"
+  (->> "day1/people.edn"
     (io/resource)
     (io/reader)               ;; create java.io.Reader instance from URI
     (java.io.PushbackReader.) ;; wrap in PushbackReader
