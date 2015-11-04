@@ -11,11 +11,34 @@ Airport dataset from: http://ourairports.com/data/
 
 ## Day 2 namespaces
 
-- [day2.custom-types](src/ws_ldn_1/day2/custom_types.clj) - Custom types & protocols
+### Clojure SVG airport visualization
+
 - [day2.mercator](src/ws_ldn_1/day2/mercator.clj) - Mercator projection
 - [day2.svgmap](src/ws_ldn_1/day2/svgmap.clj) - SVG mercator map
 
+![47k airports](assets/airports.svg)
+
+47k airports mapped, data from [ourairports.com](http://ourairports.com/data/)
+
+### Clojurescript, Reagent / React example
+
+- [ui.day2.core](src-cljs/ws_ldn_1/day2/core.cljs) - basic concepts & undo demo
+
+To launch (make sure you comment out invocation of `(main)` in day3.core ns):
+
+```bash
+lein figwheel day2
+```
+
 ## Day 3 namespaces
+
+- [ui.day3.core](src-cljs/ws_ldn_1/day3/core.cljs) - thi.ng/geom vizualization examples (using Reagent)
+
+To launch (make sure you comment out invocation of `(main)` in day2.core ns):
+
+```bash
+lein figwheel day3
+```
 
 ## Usage
 
