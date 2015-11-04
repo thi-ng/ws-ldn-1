@@ -16,7 +16,7 @@ Airport dataset from: http://ourairports.com/data/
 - [day2.mercator](src/ws_ldn_1/day2/mercator.clj) - Mercator projection
 - [day2.svgmap](src/ws_ldn_1/day2/svgmap.clj) - SVG mercator map
 
-![47k airports](assets/airports.svg)
+![47k airports](http://workshop.thi.ng/ws-ldn-1/airports.svg)
 
 47k airports mapped, data from [ourairports.com](http://ourairports.com/data/)
 
