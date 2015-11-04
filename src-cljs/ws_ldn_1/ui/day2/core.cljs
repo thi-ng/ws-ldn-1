@@ -84,4 +84,4 @@
     (let [el (.getElementById js/document "main-area")]
       (set! (.-innerHTML el) "<h1>Coffee time</h1>"))))
 
-(main)
+;; (main)

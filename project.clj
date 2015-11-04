@@ -18,5 +18,12 @@
                         :compiler {:main "ws-ldn-1.ui.day2.core"
                                    :asset-path "js/out"
                                    :output-to "resources/public/js/app.js"
+                                   :output-dir "resources/public/js/out"}}
+                       {:id "day3" 
+                        :source-paths ["src-cljs"]
+                        :figwheel true
+                        :compiler {:main "ws-ldn-1.ui.day3.core"
+                                   :asset-path "js/out"
+                                   :output-to "resources/public/js/app.js"
                                    :output-dir "resources/public/js/out"}}]
 })
