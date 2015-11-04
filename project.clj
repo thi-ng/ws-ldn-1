@@ -10,7 +10,8 @@
                  [thi.ng/geom "0.0.881"]
                  [thi.ng/strf "0.2.1"]]
   
-  :plugins      [[lein-figwheel "0.4.1"]]
+  :plugins      [[lein-figwheel "0.4.1"]
+                 [lein-cljsbuild "1.1.0"]]
   
   :cljsbuild {:builds [{:id "day2" 
                         :source-paths ["src-cljs"]
@@ -22,8 +23,11 @@
                        {:id "day3" 
                         :source-paths ["src-cljs"]
                         :figwheel true
-                        :compiler {:main "ws-ldn-1.ui.day3.core"
+                        :compiler {:main "ws-ldn-1.ui.day3.webgl"
                                    :asset-path "js/out"
+                                   ;;:optimizations :advanced
+                                   ;;:pretty-print false
                                    :output-to "resources/public/js/app.js"
-                                   :output-dir "resources/public/js/out"}}]
+                                   ;;:output-dir "resources/public/js/out"
+                                   }}]
 })
