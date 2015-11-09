@@ -60,6 +60,14 @@ To launch:
 lein figwheel day3-webgl
 ```
 
+## CLJS build w/ advanced optimizations
+
+To build the CLJS examples with advanced optimizations, remove the commented lines from the `project.clj` file and disable the `:output-dir` key for the relevant build profile(s). Then compile the source with:
+
+```bash
+lein do clean, cljsbuild once <insert-build-profile-id>
+```
+
 ## License
 
 Copyright © 2015 Karsten Schmidt
