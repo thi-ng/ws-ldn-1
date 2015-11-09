@@ -52,6 +52,10 @@ To launch:
 lein figwheel day3-viz
 ```
 
+![heatmap example](assets/heatmap-example.jpg)
+
+[Live demo](http://demo.thi.ng/ws-ldn-1/geom-viz/index.html)
+
 - [ui.day3.webgl](src-cljs-day3-2/ws_ldn_1/ui/day3/webgl.cljs) - thi.ng/geom WebGL & in-browser STL mesh export example
 
 To launch:
@@ -60,9 +64,13 @@ To launch:
 lein figwheel day3-webgl
 ```
 
+![webgl example](assets/webgl-example.jpg)
+
+[Live demo](http://demo.thi.ng/ws-ldn-1/webgl/index.html)
+
 ## CLJS build w/ advanced optimizations
 
-To build the CLJS examples with advanced optimizations, remove the commented lines from the `project.clj` file and disable the `:output-dir` key for the relevant build profile(s). Then compile the source with:
+To build the CLJS examples with advanced optimizations, uncomment the lines with `:optimizations` & `:pretty-print` from the `project.clj` file for the relevant build profile(s). Then compile the source with:
 
 ```bash
 lein do clean, cljsbuild once <insert-build-profile-id>
