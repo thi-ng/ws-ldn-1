@@ -29,10 +29,12 @@
       (reset! ref (last history))
       (set-error! "can't undo further..."))))
 
+;; Components
+
 (defn checkbox
   "Checkbox component wired to :checks key in app-state (see init-app fn below)"
   [id {:keys [checked col]}]
-  [:div {:key (str "check" id) :style {:background col}}
+  [:div {:key (str "cb" id) :style {:background col}}
    [:input
     {:type      "checkbox"
      :checked   checked
@@ -52,11 +54,11 @@
    [user-error]
    [:p "Current counter: " (:counter @app-state)]
    (map-indexed checkbox (:checks @app-state))
-   [:p "App state:"]
-   [:textarea {:cols 60 :rows 5 :value (pr-str @app-state)}]
+   ;; [:p "App state:"]
+   ;; [:textarea {:cols 60 :rows 5 :value (pr-str @app-state)}]
    [:p
-    [:button {:on-click #(undo! app-state)} "Undo"]
-    [:button {:on-click #(swap*! app-state update :counter inc)} "Next"]]])
+    [:button {:on-click #(undo! app-state)} "Undo"] " "
+    [:button {:on-click #(swap*! app-state update :counter inc)} "+1"]]])
 
 (defn init-app
   "Initializes app-state atom with default state"
@@ -84,4 +86,4 @@
     (let [el (.getElementById js/document "main-area")]
       (set! (.-innerHTML el) "<h1>Coffee time</h1>"))))
 
-;; (main)
+(main)

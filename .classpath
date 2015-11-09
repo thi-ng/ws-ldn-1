@@ -21,7 +21,8 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src-cljs"/>
+	<classpathentry kind="src" path="src-cljs-day3-1"/>
+	<classpathentry kind="src" path="src-cljs-day2"/>
 	<classpathentry kind="lib" path="target/classes">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -33,5 +34,6 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="src-cljs-day3-2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
