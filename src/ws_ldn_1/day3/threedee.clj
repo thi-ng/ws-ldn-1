@@ -1,4 +1,5 @@
 (ns ws-ldn-1.threedee
+  "3D mesh examples & export"
   (:require
     [thi.ng.geom.core :as g]
     [thi.ng.geom.core.vector :as v]
