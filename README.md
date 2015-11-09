@@ -26,7 +26,7 @@ Github doesn't display the map background image, see original viz [here](http://
 
 ### Clojurescript, Reagent / React example
 
-- [ui.day2.core](src-cljs-day2/ws_ldn_1/day2/core.cljs) - basic [Reagent](http://reagent-project.github.io) concepts & undo demo
+- [ui.day2.core](src-cljs-day2/ws_ldn_1/ui/day2/core.cljs) - basic [Reagent](http://reagent-project.github.io) concepts & undo demo
 
 To launch:
 
@@ -44,7 +44,7 @@ Exported meshes are located in [assets](assets/) folder.
 
 ### Clojurescript
 
-- [ui.day3.core](src-cljs-day3-1/ws_ldn_1/day3/core.cljs) - thi.ng/geom vizualization examples (using Reagent)
+- [ui.day3.core](src-cljs-day3-1/ws_ldn_1/ui/day3/viz.cljs) - thi.ng/geom vizualization examples (using Reagent)
 
 To launch:
 
@@ -52,7 +52,7 @@ To launch:
 lein figwheel day3-viz
 ```
 
-- [ui.day3.webgl](src-cljs-day3-2/ws_ldn_1/day3/webgl.cljs) - thi.ng/geom WebGL & in-browser STL mesh export example
+- [ui.day3.webgl](src-cljs-day3-2/ws_ldn_1/ui/day3/webgl.cljs) - thi.ng/geom WebGL & in-browser STL mesh export example
 
 To launch:
 
