@@ -21,7 +21,7 @@
       (g/tessellate mesh))))
 
 (def mesh
-  "Generates subdivided, hollow hexagon cylinder mesh from 2D circle"
+  "Generates 3x subdivided, hexagon cylinder mesh from 2D circle"
   (-> (c/circle 10)
       (g/extrude {:depth 20 :res 6 :wall 2 :mesh (gm/gmesh)})
       (sd/catmull-clark)
